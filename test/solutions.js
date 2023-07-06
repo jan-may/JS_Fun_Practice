@@ -65,39 +65,39 @@ describe("JS_Fun_Practice", function () {
       assert.equal(sol.addRecurse(1, 2, 4), 7);
     });
   });
-  // describe("mulRecurse(...nums)", function () {
-  //   it("is a mul fuction that is generalized but uses recursion", function () {
-  //     assert.equal(sol.mulRecurse(1, 2, 4), 8);
-  //   });
-  // });
-  // describe("minRecurse(...nums)", function () {
-  //   it("is a min fuction that is generalized but uses recursion", function () {
-  //     assert.equal(sol.minRecurse(1, 2, 4), 1);
-  //   });
-  // });
-  // describe("maxRecurse(...nums)", function () {
-  //   it("is a max fuction that is generalized but uses recursion", function () {
-  //     assert.equal(sol.maxRecurse(1, 2, 4), 4);
-  //   });
-  // });
-  // describe("not(func)", function () {
-  //   it("takes a function and returns the negation of its result", function () {
-  //     const isOdd = (x) => x % 2 === 1;
-  //     const isEven = sol.not(isOdd);
-  //     assert.equal(isEven(1), false);
-  //     assert.equal(isEven(2), true);
-  //   });
-  // });
-  // describe("acc(func,initial)", function () {
-  //   it(`takes a function and an initial value and returns a function
-  //       that runs the initial function on each argument, accumulating the result`, function () {
-  //     let add = sol.acc(sol.addb, 0);
-  //     assert.equal(add(1, 2, 4), 7);
+  describe("mulRecurse(...nums)", function () {
+    it("is a mul fuction that is generalized but uses recursion", function () {
+      assert.equal(sol.mulRecurse(1, 2, 4), 8);
+    });
+  });
+  describe("minRecurse(...nums)", function () {
+    it("is a min fuction that is generalized but uses recursion", function () {
+      assert.equal(sol.minRecurse(1, 2, 4), 1);
+    });
+  });
+  describe("maxRecurse(...nums)", function () {
+    it("is a max fuction that is generalized but uses recursion", function () {
+      assert.equal(sol.maxRecurse(1, 2, 4), 4);
+    });
+  });
+  describe("not(func)", function () {
+    it("takes a function and returns the negation of its result", function () {
+      const isOdd = (x) => x % 2 === 1;
+      const isEven = sol.not(isOdd);
+      assert.equal(isEven(1), false);
+      assert.equal(isEven(2), true);
+    });
+  });
+  describe("acc(func,initial)", function () {
+    it(`takes a function and an initial value and returns a function
+        that runs the initial function on each argument, accumulating the result`, function () {
+      let add = sol.acc(sol.addb, 0);
+      assert.equal(add(1, 2, 4), 7);
 
-  //     let mul = sol.acc(sol.mulb, 1);
-  //     assert.equal(mul(1, 2, 4), 8);
-  //   });
-  // });
+      let mul = sol.acc(sol.mulb, 1);
+      assert.equal(mul(1, 2, 4), 8);
+    });
+  });
   // describe("accPartial(func,start,end)", function () {
   //   it(`takes in a function, a start index, and an end index, and returns a function
   //       that accumulates a subset of its arguments by applying the given function to
@@ -115,45 +115,45 @@ describe("JS_Fun_Practice", function () {
   //     assert.equal(mul(1, 2, 4), 8);
   //   });
   // });
-  // describe("fill(num)", function () {
-  //   it(`takes a number and returns an array with that many numbers equal to the given
-  //       number`, function () {
-  //     expect(sol.fill(3)).to.deep.equal([3, 3, 3]);
-  //   });
-  // });
+  describe("fill(num)", function () {
+    it(`takes a number and returns an array with that many numbers equal to the given
+        number`, function () {
+      expect(sol.fill(3)).to.deep.equal([3, 3, 3]);
+    });
+  });
   // describe("fillRecurse(num)", function () {
   //   it(`does what fill does but uses recursion`, function () {
   //     expect(sol.fillRecurse(3)).to.deep.equal([3, 3, 3]);
   //   });
   // });
-  // describe("set(...args)", function () {
-  //   it(`is given a list of arguments and returns an array with all duplicates
-  //       removed`, function () {
-  //     expect(sol.set(1, 1, 1, 2, 2, 2)).to.deep.equal([1, 2]);
-  //   });
-  // });
-  // describe("identityf(x)", function () {
-  //   it(`takes an argument and returns a function that returns that argument`, function () {
-  //     assert.equal(sol.identityf(3)(), 3);
-  //   });
-  // });
-  // describe("addf(a)", function () {
-  //   it(`adds from two invocations`, function () {
-  //     assert.equal(sol.addf(3)(4), 7);
-  //   });
-  // });
-  // describe("liftf(binary)", function () {
-  //   it(`takes a binary function, and makes it callable with two invocations`, function () {
-  //     assert.equal(sol.liftf(sol.addb)(3)(4), 7);
-  //     assert.equal(sol.liftf(sol.mulb)(5)(6), 30);
-  //   });
-  // });
-  // describe("pure(x,y)", function () {
-  //   it(`is a wrapper arround the impure function impure`, function () {
-  //     expect(sol.pure(20, 5)).to.deep.equal([6, 120]);
-  //     expect(sol.pure(25, 6)).to.deep.equal([7, 175]);
-  //   });
-  // });
+  describe("set(...args)", function () {
+    it(`is given a list of arguments and returns an array with all duplicates
+        removed`, function () {
+      expect(sol.set(1, 1, 1, 2, 2, 2)).to.deep.equal([1, 2]);
+    });
+  });
+  describe("identityf(x)", function () {
+    it(`takes an argument and returns a function that returns that argument`, function () {
+      assert.equal(sol.identityf(3)(), 3);
+    });
+  });
+  describe("addf(a)", function () {
+    it(`adds from two invocations`, function () {
+      assert.equal(sol.addf(3)(4), 7);
+    });
+  });
+  describe("liftf(binary)", function () {
+    it(`takes a binary function, and makes it callable with two invocations`, function () {
+      assert.equal(sol.liftf(sol.addb)(3)(4), 7);
+      assert.equal(sol.liftf(sol.mulb)(5)(6), 30);
+    });
+  });
+  describe("pure(x,y)", function () {
+    it(`is a wrapper arround the impure function impure`, function () {
+      expect(sol.pure(20, 5)).to.deep.equal([6, 120]);
+      expect(sol.pure(25, 6)).to.deep.equal([7, 175]);
+    });
+  });
   // describe("curryb(binary, a)", function () {
   //   it(`takes a binary function and an argument, and returns a function that can take
   //       a second argument`, function () {
@@ -168,12 +168,12 @@ describe("JS_Fun_Practice", function () {
   //     assert.equal(sol.curry(sol.mul, 1, 2, 4)(4, 2, 1), 64);
   //   });
   // });
-  // describe("inc(x)", function () {
-  //   it(`shows multiple ways to create the inc function`, function () {
-  //     assert.equal(sol.inc(5), 6);
-  //     assert.equal(sol.inc(sol.inc(5)), 7);
-  //   });
-  // });
+  describe("inc(x)", function () {
+    it(`shows multiple ways to create the inc function`, function () {
+      assert.equal(sol.inc(5), 6);
+      assert.equal(sol.inc(sol.inc(5)), 7);
+    });
+  });
   // describe("twiceUnary(binary)", function () {
   //   it(`takes a binary function and returns a unary function that passes its argument
   //       to the binary function twice`, function () {
